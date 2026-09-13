@@ -181,6 +181,12 @@ h1{
   gap:18px;
 }
 
+.priority-grid > .priority:last-child:nth-child(odd){
+  grid-column:1 / -1;
+  width:calc(50% - 9px);
+  justify-self:center;
+}
+
 .priority{
   position:relative;
   min-height:100%;
@@ -405,6 +411,10 @@ footer{
   .section-bubble{padding:24px}
   .section-bubble.about,.section-bubble.closing{padding:24px}
   .priority-grid{grid-template-columns:1fr}
+  .priority-grid > .priority:last-child:nth-child(odd){
+    grid-column:auto;
+    width:100%;
+  }
   .cycle{grid-template-columns:1fr}
   .cycle-wrap{padding:24px}
   .principle{padding:28px 24px}
@@ -550,6 +560,13 @@ footer{
         <h3>Strengthen Emergency Resilience</h3>
         <p>
           The SCRD has made important progress identifying the hazards facing our region and improving emergency preparedness. The next step is to turn that knowledge into action. Complete regional evacuation planning, strengthen neighbourhood and response capacity, identify and protect critical infrastructure, and ensure known wildfire, flood and other hazards inform future land-use decisions. Good emergency management means reducing foreseeable risks before an emergency forces us to react.
+        </p>
+      </article>
+
+      <article class="priority">
+        <h3>Govern Recreation for the Long Term</h3>
+        <p>
+          Recreation and cultural services are the largest single share of Area D's SCRD tax dollars, accounting for about 35% in 2026. Spending at that scale deserves clear annual public reporting that brings together facility use, operating costs, condition, capital needs and long-term viability. The Board should review major facilities against clear service goals, identify risks before they become urgent, and adjust plans as conditions change. Recreation should be governed as a major public service, not allowed to drift until a facility or funding problem becomes the next crisis.
         </p>
       </article>
 
