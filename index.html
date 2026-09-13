@@ -232,15 +232,16 @@ h1{
 .cycle{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:16px;
+  gap:14px;
   max-width:860px;
   margin:0 auto;
 }
 
 .cycle-card{
   width:100%;
+  min-width:0;
   border-radius:18px;
-  padding:26px;
+  padding:18px 18px 14px;
   border:1px solid var(--line);
   text-align:center;
 }
@@ -253,18 +254,34 @@ h1{
 }
 
 .cycle-card h3{
-  margin:0 0 12px;
-  font-size:1rem;
-  letter-spacing:.08em;
+  margin:0 0 0;
+  font-size:.95rem;
+  letter-spacing:.09em;
   text-transform:uppercase;
 }
 
 .cycle-card.governing h3{color:var(--forest2)}
 
-.flow{
-  font-size:1.08rem;
+.cycle-svg{
+  display:block;
+  width:min(100%,330px);
+  height:auto;
+  margin:0 auto;
+}
+
+.cycle-svg text{
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:12px;
   font-weight:800;
-  line-height:1.55;
+  letter-spacing:.005em;
+  text-anchor:middle;
+  dominant-baseline:middle;
+}
+
+@media(max-width:780px){
+  .cycle{grid-template-columns:1fr}
+  .cycle-card{padding:18px 14px 14px}
+  .cycle-svg{width:min(100%,315px)}
 }
 
 .principle{
@@ -549,12 +566,44 @@ footer{
       <div class="cycle">
         <div class="cycle-card reacting">
           <h3>Reacting</h3>
-          <div class="flow">Pressure → Response → Partial decision → Drift → Crisis → Pressure</div>
+          <svg class="cycle-svg" viewBox="0 0 320 260" role="img" aria-label="Reacting cycle: Pressure, Response, Partial decision, Drift, Crisis, then back to Pressure.">
+<defs>
+<marker id="reactingArrow" viewBox="0 0 10 10" refX="8.2" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a3635b"/></marker>
+</defs>
+<path d="M178.4,56.3 A76,76 0 0 1 224.5,89.7" fill="none" stroke="#a3635b" stroke-width="2.5" stroke-linecap="round" marker-end="url(#reactingArrow)" opacity="0.9"/>
+<path d="M235.8,124.7 A76,76 0 0 1 218.2,178.9" fill="none" stroke="#a3635b" stroke-width="2.5" stroke-linecap="round" marker-end="url(#reactingArrow)" opacity="0.9"/>
+<path d="M188.5,200.5 A76,76 0 0 1 131.5,200.5" fill="none" stroke="#a3635b" stroke-width="2.5" stroke-linecap="round" marker-end="url(#reactingArrow)" opacity="0.9"/>
+<path d="M101.8,178.9 A76,76 0 0 1 84.2,124.7" fill="none" stroke="#a3635b" stroke-width="2.5" stroke-linecap="round" marker-end="url(#reactingArrow)" opacity="0.9"/>
+<path d="M95.5,89.7 A76,76 0 0 1 141.6,56.3" fill="none" stroke="#a3635b" stroke-width="2.5" stroke-linecap="round" marker-end="url(#reactingArrow)" opacity="0.9"/>
+<text x="160.0" y="27.0" fill="#693a34">Pressure</text>
+<text x="258.0" y="98.2" fill="#693a34">Response</text>
+<text x="220.5" y="207.3" fill="#693a34"><tspan x="220.5" dy="0">Partial</tspan><tspan x="220.5" dy="13">decision</tspan></text>
+<text x="99.5" y="213.3" fill="#693a34">Drift</text>
+<text x="62.0" y="98.2" fill="#693a34">Crisis</text>
+</svg>
         </div>
 
         <div class="cycle-card governing">
           <h3>Governing</h3>
-          <div class="flow">Listen → Define Goal → Plan → Responsibility → Execute → Measure → Finish → Listen</div>
+          <svg class="cycle-svg" viewBox="0 0 320 260" role="img" aria-label="Governing cycle: Listen, Define Goal, Plan, Assign Responsibility, Execute, Measure, Finish, then back to Listen.">
+<defs>
+<marker id="governingArrow" viewBox="0 0 10 10" refX="8.2" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4d8174"/></marker>
+</defs>
+<path d="M173.2,55.2 A76,76 0 0 1 210.3,73.0" fill="none" stroke="#4d8174" stroke-width="2.5" stroke-linecap="round" marker-end="url(#governingArrow)" opacity="0.9"/>
+<path d="M226.7,93.7 A76,76 0 0 1 235.9,133.8" fill="none" stroke="#4d8174" stroke-width="2.5" stroke-linecap="round" marker-end="url(#governingArrow)" opacity="0.9"/>
+<path d="M230.0,159.5 A76,76 0 0 1 204.4,191.7" fill="none" stroke="#4d8174" stroke-width="2.5" stroke-linecap="round" marker-end="url(#governingArrow)" opacity="0.9"/>
+<path d="M180.6,203.2 A76,76 0 0 1 139.4,203.2" fill="none" stroke="#4d8174" stroke-width="2.5" stroke-linecap="round" marker-end="url(#governingArrow)" opacity="0.9"/>
+<path d="M115.6,191.7 A76,76 0 0 1 90.0,159.5" fill="none" stroke="#4d8174" stroke-width="2.5" stroke-linecap="round" marker-end="url(#governingArrow)" opacity="0.9"/>
+<path d="M84.1,133.8 A76,76 0 0 1 93.3,93.7" fill="none" stroke="#4d8174" stroke-width="2.5" stroke-linecap="round" marker-end="url(#governingArrow)" opacity="0.9"/>
+<path d="M109.7,73.0 A76,76 0 0 1 146.8,55.2" fill="none" stroke="#4d8174" stroke-width="2.5" stroke-linecap="round" marker-end="url(#governingArrow)" opacity="0.9"/>
+<text x="160.0" y="22.0" fill="#155f51">Listen</text>
+<text x="244.4" y="56.7" fill="#155f51"><tspan x="244.4" dy="0">Define</tspan><tspan x="244.4" dy="13">Goal</tspan></text>
+<text x="265.3" y="154.0" fill="#155f51">Plan</text>
+<text x="206.9" y="221.3" fill="#155f51"><tspan x="206.9" dy="0">Assign</tspan><tspan x="206.9" dy="13">Responsibility</tspan></text>
+<text x="113.1" y="227.3" fill="#155f51">Execute</text>
+<text x="54.7" y="154.0" fill="#155f51">Measure</text>
+<text x="75.6" y="62.7" fill="#155f51">Finish</text>
+</svg>
         </div>
       </div>
 
@@ -565,7 +614,7 @@ footer{
         </blockquote>
         <div class="method">
           LISTEN &nbsp;|&nbsp; DEFINE THE GOAL &nbsp;|&nbsp; MAKE THE PLAN &nbsp;|&nbsp; ASSIGN RESPONSIBILITY &nbsp;|&nbsp;
-          EXECUTE &nbsp;|&nbsp; MEASURE &nbsp;|&nbsp; FINISH &nbsp;|&nbsp; LISTEN
+          EXECUTE &nbsp;|&nbsp; MEASURE &nbsp;|&nbsp; FINISH
         </div>
       </div>
     </div>
