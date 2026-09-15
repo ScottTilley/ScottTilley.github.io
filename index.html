@@ -424,6 +424,52 @@ footer{
   html{scroll-behavior:auto}
   .priority{transition:none}
 }
+
+.news-card{
+  max-width:860px;
+  margin:0 auto;
+  padding:34px clamp(26px,4vw,42px);
+  border-radius:22px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+.news-meta{
+  margin:0 0 10px;
+  font-size:.82rem;
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--forest2);
+}
+.news-card h3{
+  margin:0;
+  color:var(--forest);
+  font-family:Charter,"Bitstream Charter","Liberation Serif",Georgia,serif;
+  font-size:clamp(1.8rem,3vw,2.5rem);
+  line-height:1.08;
+}
+.news-card p{
+  margin:16px 0 0;
+  color:#41544f;
+}
+.news-actions{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:24px;
+}
+.news-link{
+  display:inline-block;
+  padding:12px 18px;
+  border-radius:999px;
+  background:var(--forest);
+  color:#fff;
+  text-decoration:none;
+  font-weight:850;
+}
+
 </style>
 </head>
 
@@ -437,6 +483,7 @@ footer{
     </div>
     <nav class="navlinks" aria-label="Primary navigation">
       <a href="#goal">My Goal</a>
+      <a href="#news">Campaign News</a>
       <a href="#priorities">Priorities</a>
       <a href="#method">How I’d Govern</a>
       <a href="#about">Who is Scott?</a>
@@ -472,6 +519,36 @@ footer{
           This campaign is about giving Roberts Creek a real choice and demonstrating a deliberate, accountable approach to local government. Whatever the outcome on October 17, I want this election to strengthen the expectations we place on the office and the connection between the Director and the community.
         </p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="news">
+  <div class="shell">
+    <div class="section-bubble">
+      <div class="section-head">
+        <h2>Campaign News</h2>
+        <p>Updates and announcements from the campaign.</p>
+      </div>
+
+      <article class="news-card">
+        <p class="news-meta">September 14, 2026 &middot; Press Release</p>
+        <h3>Scott Tilley seeking election as Area D Director</h3>
+        <p>
+          Scott Tilley is seeking election as Director for Roberts Creek, Area D, in the October 17 SCRD election.
+          His campaign is built around a deliberate, accountable approach to local government: listen, define the goal,
+          make the plan, assign responsibility, execute, measure and finish.
+        </p>
+        <p>
+          The opposite is a reaction cycle: pressure builds, a response is made, decisions are only partly carried through,
+          attention drifts, and the issue returns as the next crisis.
+        </p>
+        <div class="news-actions">
+          <a class="news-link" href="Scott_Tilley_Area_D_Press_Release.pdf" target="_blank" rel="noopener">
+            Read the Press Release (PDF)
+          </a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
