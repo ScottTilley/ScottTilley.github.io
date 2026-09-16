@@ -425,6 +425,20 @@ footer{
   .priority{transition:none}
 }
 
+.news-scroll{
+  max-width:900px;
+  max-height:590px;
+  margin:0 auto;
+  padding:2px 14px 2px 2px;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  scrollbar-gutter:stable;
+  scrollbar-width:thin;
+  scrollbar-color:var(--forest2) var(--cream);
+}
+.news-scroll::-webkit-scrollbar{width:10px}
+.news-scroll::-webkit-scrollbar-track{background:var(--cream);border-radius:999px}
+.news-scroll::-webkit-scrollbar-thumb{background:var(--forest2);border-radius:999px;border:2px solid var(--cream)}
 .news-card{
   max-width:860px;
   margin:0 auto;
@@ -433,6 +447,9 @@ footer{
   background:var(--paper);
   border:1px solid var(--line);
   box-shadow:var(--shadow);
+}
+.news-card + .news-card{
+  margin-top:20px;
 }
 .news-meta{
   margin:0 0 10px;
@@ -468,6 +485,9 @@ footer{
   color:#fff;
   text-decoration:none;
   font-weight:850;
+}
+@media(max-width:780px){
+  .news-scroll{max-height:640px;padding-right:8px}
 }
 
 </style>
@@ -528,6 +548,25 @@ footer{
         <p>Updates and announcements from the campaign.</p>
       </div>
 
+      <div class="news-scroll" aria-label="Campaign news archive">
+      <article class="news-card">
+        <p class="news-meta">September 15, 2026 &middot; Community Meeting</p>
+        <h3>Meeting with the RCOCPC</h3>
+        <p>
+          On September 15, I spoke with the RCOCPC about why I am running,
+          my approach to governance, and my position on renewing the OCP without losing Roberts Creek.
+        </p>
+        <p>
+          I came away with a much better understanding of the committee’s shared concerns, the individual views around the table,
+          and how the OCP process is unfolding. That will help inform how I think about the path forward for Roberts Creek.
+        </p>
+        <div class="news-actions">
+          <a class="news-link" href="Scott_Tilley_RCOCPC_Statement.pdf" target="_blank" rel="noopener">
+            Read My RCOCPC Statement (PDF)
+          </a>
+        </div>
+      </article>
+
       <article class="news-card">
         <p class="news-meta">September 14, 2026 &middot; Press Release</p>
         <h3>Scott Tilley seeking election as Area D Director</h3>
@@ -546,6 +585,7 @@ footer{
           </a>
         </div>
       </article>
+      </div>
     </div>
   </div>
 </section>
