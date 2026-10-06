@@ -508,6 +508,19 @@ footer{
   text-decoration:none;
   font-weight:850;
 }
+
+.news-link.audio-link{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  background:var(--forest2);
+}
+
+.news-link.audio-link::before{
+  content:"▶";
+  font-size:.82em;
+  line-height:1;
+}
 @media(max-width:780px){
   .news-scroll{max-height:640px;padding-right:8px}
 }
@@ -582,7 +595,10 @@ footer{
         </p>
         <div class="news-actions">
           <a class="news-link" href="Scott_Tilley_Area_D_All_Candidates_Meeting_2026-10-05.pdf" target="_blank" rel="noopener">
-            Read My Full All Candidates Meeting Remarks
+            Read My Full Responses
+          </a>
+          <a class="news-link audio-link" href="https://archive.org/details/roberts-creek-area-d-all-candidates-meeting-2026-10-05" target="_blank" rel="noopener" aria-label="Listen to the full Roberts Creek Area D All Candidates Meeting audio on Internet Archive">
+            Listen to Full Meeting Audio
           </a>
         </div>
       </article>
