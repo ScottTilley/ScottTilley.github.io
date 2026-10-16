@@ -525,6 +525,44 @@ footer{
   .news-scroll{max-height:640px;padding-right:8px}
 }
 
+
+/* Steps to Accountability feature in the campaign news archive */
+.news-feature{
+  display:grid;
+  grid-template-columns:minmax(0,260px) minmax(0,1fr);
+  gap:24px;
+  align-items:start;
+  margin-top:12px;
+}
+.news-feature-image{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:14px;
+  border:1px solid var(--line);
+  box-shadow:0 8px 22px rgba(24,50,45,.09);
+}
+.news-feature-copy h3{margin:0}
+.news-feature-copy p{margin:12px 0 0}
+.news-feature-actions{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  margin-top:20px;
+}
+.news-feature-actions .news-link{
+  display:block;
+  padding:11px 9px;
+  text-align:center;
+  font-size:.94rem;
+  line-height:1.4;
+}
+@media(max-width:650px){
+  .news-feature{grid-template-columns:1fr;gap:18px}
+  .news-feature-image{max-width:220px;margin:0 auto}
+  .news-feature-actions{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
 </style>
 </head>
 
@@ -584,6 +622,33 @@ footer{
       </div>
 
       <div class="news-scroll" aria-label="Campaign news archive">
+
+      <article class="news-card">
+        <p class="news-meta">October 15, 2026 &middot; Campaign Update</p>
+        <div class="news-feature">
+          <img class="news-feature-image" src="steps_to_accountability_walk.jpg"
+               width="950" height="989" loading="lazy" decoding="async"
+               alt="A walk along a Roberts Creek road, with the campaign series title Steps to Accountability">
+          <div class="news-feature-copy">
+            <h3>Steps to Accountability</h3>
+            <p>
+              Accountability should be built into how local government works. It means listening to residents,
+              setting clear objectives, following through, measuring results and reporting back.
+            </p>
+            <p>
+              These four short papers show how I would apply that approach to practical issues facing Roberts Creek,
+              with processes that the next Director can build upon.
+            </p>
+            <div class="news-feature-actions" aria-label="Steps to Accountability issue papers">
+              <a class="news-link" href="Steps_to_Accountability_Roads.pdf" target="_blank" rel="noopener" aria-label="Read Steps to Accountability: Roads PDF">Roads</a>
+              <a class="news-link" href="Steps_to_Accountability_Bylaw_Enforcement.pdf" target="_blank" rel="noopener" aria-label="Read Steps to Accountability: Bylaw Enforcement PDF">Bylaw Enforcement</a>
+              <a class="news-link" href="Steps_to_Accountability_Water_Billing.pdf" target="_blank" rel="noopener" aria-label="Read Steps to Accountability: Water Billing PDF">Water Billing</a>
+              <a class="news-link" href="Steps_to_Accountability_Curbside_Recycling.pdf" target="_blank" rel="noopener" aria-label="Read Steps to Accountability: Curbside Recycling PDF">Curbside Recycling</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
       <article class="news-card">
         <p class="news-meta">October 8, 2026 &middot; OCP Renewal</p>
         <h3>One of Nine Is Not an Excuse</h3>
